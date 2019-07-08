@@ -45,11 +45,11 @@ function multiplyNums(x, y, cb) {
 multiplyNums(2, 2, product => console.log(product));
 
 function contains(item, list, cb) {
+  return cb(list.filter(items => items === item).length !== 0)
 	// contains checks if an item is present inside of the given array/list.
 	// Pass true to the callback if it is, otherwise pass false.
-	return cb(item, list);
 }
-
+contains("Pencil", items, isThere => console.log(isThere));
 /* STRETCH PROBLEM */
 
 function removeDuplicates(array, cb) {
