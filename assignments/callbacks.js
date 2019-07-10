@@ -22,7 +22,7 @@ const items = [ 'Pencil', 'Notebook', 'yo-yo', 'Gum' ];
 
 // getLength passes the length of the array into the callback.
 function getLength(arr, cb) {
-	return cb([ arr.length ]);
+	return cb(arr.length);
 }
 getLength(items, length => console.log(length));
 
@@ -45,11 +45,11 @@ function multiplyNums(x, y, cb) {
 multiplyNums(2, 2, product => console.log(product));
 
 function contains(item, list, cb) {
-  return cb(list.filter(items => items === item).length !== 0)
+	return cb(list.filter(items => items === item).length !== 0);
 	// contains checks if an item is present inside of the given array/list.
 	// Pass true to the callback if it is, otherwise pass false.
 }
-contains("Pencil", items, isThere => console.log(isThere));
+contains('Pencil', items, isThere => console.log(isThere));
 /* STRETCH PROBLEM */
 
 function removeDuplicates(array, cb) {
